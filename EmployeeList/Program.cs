@@ -13,13 +13,30 @@
             //Console.WriteLine(d.GetFirstName());
             //d.Salary = 20000; 
 
-            Employee emp = new Employee("Anders", 20000);
+            //Employee emp = new Employee("Anders", 20000);
 
-            Console.WriteLine($"Name: {emp.Name} Salary: {emp.Salary}");
+            //Console.WriteLine($"Name: {emp.Name} Salary: {emp.Salary}");
 
-            emp.Name = "Nisse";
+            //emp.Name = "Nisse";
 
-            Console.WriteLine($"Name: {emp.Name} Salary: {emp.Salary}");
+            //Console.WriteLine($"Name: {emp.Name} Salary: {emp.Salary}");
+
+
+
+            Payroll payroll = new Payroll();
+
+            //Lägger till ny anställd
+            payroll.AddEmployee("Kalle", 25000);
+            payroll.AddEmployee("Anna", 30000);
+
+            //Hämtar en samling av alla anställda.
+            IEnumerable<Employee> employees = payroll.GetEmployees();
+
+            //Skriver ut alla anställda
+            foreach (Employee employee in employees)
+            {
+                Console.WriteLine($"Name: {employee.Name} Salary: {employee.Salary}");
+            }
 
         }
     }
