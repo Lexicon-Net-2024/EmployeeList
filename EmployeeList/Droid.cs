@@ -11,7 +11,7 @@ namespace EmployeeList
         //Fields. Privata, kommer inte åt utanför klassen. Liten bokstav
         private string firstname;
 
-        private int salary; 
+        private int salary;         
 
         //Property, publikt går att komma åt utanför klassen. Stor bokstav
         public int Salary
@@ -39,11 +39,12 @@ namespace EmployeeList
         //    set { salary2 = value; }
         //}
 
-
+        public static int Count; 
 
         public Droid(string name)
         {
             firstname = name;
+            Count++;
         }
 
         public string GetFirstName()
@@ -53,6 +54,11 @@ namespace EmployeeList
         public void SetFirstName(string name)
         {
             firstname = name; 
+        }
+
+        public static void GetCount()
+        {
+            Console.WriteLine(Count);
         }
     }
 }
