@@ -8,6 +8,8 @@ namespace EmployeeList
         private static Payroll payRoll = new Payroll(); 
         static void Main(string[] args)
         {
+
+            SeedData(); 
             do
             {
                 
@@ -55,7 +57,7 @@ namespace EmployeeList
                 {
                     success = true;
                     Console.Write("Salary: ");
-                    int.TryParse(Console.ReadLine(), out salary);
+                  int.TryParse(Console.ReadLine(), out salary);
                 }
             } while (!success);
             payRoll.AddEmployee(name, salary);
@@ -70,6 +72,13 @@ namespace EmployeeList
                 //Console.WriteLine($"Name: {employee.Name} Salary: {employee.Salary}");
                 Console.WriteLine(employee.ToString()); 
             }
+        }
+
+        private static void SeedData()
+        {
+            payRoll.AddEmployee("Anna", 30000);
+            payRoll.AddEmployee("Stefan", 25000);
+            payRoll.AddEmployee("Lasse", 35000);
         }
     }
 }
