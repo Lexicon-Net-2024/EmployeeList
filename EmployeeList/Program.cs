@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Xml.Linq;
+using EmployeeList.Helpers;
 
 namespace EmployeeList
 {
@@ -40,27 +41,10 @@ namespace EmployeeList
 
         private static void AddEmployee()
         {
-            bool success = false;
-            string name;
-            int salary = 0;
+            string name = Util.AskForString("Name");
+            uint salary = Util.AskForUInt("Salary");
 
-            do
-            {
-                Console.Write("Name: ");
-                name = Console.ReadLine();
-
-                if (string.IsNullOrWhiteSpace(name))
-                {
-                    Console.WriteLine("You must enter a valid name");
-                }
-                else
-                {
-                    success = true;
-                    Console.Write("Salary: ");
-                  int.TryParse(Console.ReadLine(), out salary);
-                }
-            } while (!success);
-            payRoll.AddEmployee(name, salary);
+            payRoll.AddEmployee(name, salary); 
         }
 
         private static void PrintEmployees()
