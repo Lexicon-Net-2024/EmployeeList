@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EmployeeList.Helpers
+﻿namespace EmployeeList.Helpers
 {
     public static class Util
     {
@@ -29,18 +23,18 @@ namespace EmployeeList.Helpers
 
             } while (!success);
 
-            return answer; 
+            return answer;
         }
 
         public static uint AskForUInt(string prompt)
         {
-            
+
             do
             {
                 string input = AskForString(prompt);
-                if(uint.TryParse(input, out uint result))
+                if (uint.TryParse(input, out uint result))
                 {
-                    return result; 
+                    return result;
                 }
             } while (true);
         }

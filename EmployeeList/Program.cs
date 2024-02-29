@@ -10,24 +10,27 @@ namespace EmployeeList
         static void Main(string[] args)
         {
 
+            //Employee kalle = new Employee("Kalle", 50000);
+
+            //payRoll.AddEmployee(kalle);
+            //payRoll.AddEmployee("Kalle", 50000); 
+
             SeedData(); 
             do
             {
-                
-                Console.WriteLine("1. Add" +
-                    "\n2. Print" +
-                    "\nQ. Quit");
+                MenuHelpers.ShowMainMenu(); 
+               
                 string input = Console.ReadLine().ToUpper();
 
                 switch (input)
                 {
-                    case "1":                    
+                    case MenuHelpers.Add:                    
                         AddEmployee();
                         break;
-                    case "2":
+                    case MenuHelpers.Print:
                         PrintEmployees();
                         break;
-                    case "Q":
+                    case MenuHelpers.Quit:
                         Environment.Exit(0); 
                         break; 
                     default:
@@ -60,9 +63,10 @@ namespace EmployeeList
 
         private static void SeedData()
         {
-            payRoll.AddEmployee("Anna", 30000);
+            payRoll.AddEmployee(new Employee("Anna", 30000));
             payRoll.AddEmployee("Stefan", 25000);
             payRoll.AddEmployee("Lasse", 35000);
         }
+       
     }
 }
