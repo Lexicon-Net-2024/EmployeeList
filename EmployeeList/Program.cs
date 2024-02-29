@@ -6,7 +6,8 @@ namespace EmployeeList
 {
     internal class Program
     {
-        private static Payroll payRoll = new Payroll(); 
+        private static Payroll payRoll = new Payroll();
+        private static ConsoleUI ui = new ConsoleUI(); 
         static void Main(string[] args)
         {
 
@@ -20,7 +21,7 @@ namespace EmployeeList
             {
                 MenuHelpers.ShowMainMenu(); 
                
-                string input = Console.ReadLine().ToUpper();
+                string input = ui.GetInput().ToUpper();
 
                 switch (input)
                 {
@@ -34,7 +35,7 @@ namespace EmployeeList
                         Environment.Exit(0); 
                         break; 
                     default:
-                        Console.WriteLine("Not a valid selection!");
+                        ui.Print("Not a valid selection!");
                         break;
                 }
 
@@ -57,7 +58,7 @@ namespace EmployeeList
             foreach(Employee employee in employees)
             {
                 //Console.WriteLine($"Name: {employee.Name} Salary: {employee.Salary}");
-                Console.WriteLine(employee.ToString()); 
+               ui.Print(employee.ToString()); 
             }
         }
 

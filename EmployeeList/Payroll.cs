@@ -12,12 +12,12 @@ namespace EmployeeList
 
         public Payroll()
         {
-            employees = new List<Employee>(); 
+            employees = new List<Employee>();
         }
 
         internal void AddEmployee(string name, uint salary)
         {
-            employees.Add(new Employee(name, salary)); 
+            employees.Add(new Employee(name, salary));
         }
 
         internal void AddEmployee(Employee employee)
@@ -26,7 +26,7 @@ namespace EmployeeList
         }
         internal IEnumerable<Employee> GetEmployees()
         {
-            return employees.ToArray(); 
+            return employees.ToArray();
         }
     }
 }

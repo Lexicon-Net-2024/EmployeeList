@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EmployeeList
 {
-    internal class Employee : Object
+    internal class Employee : object
     {
         public string Name { get; set; }
         public uint Salary { get; set; }
@@ -32,7 +32,7 @@ namespace EmployeeList
         public Employee(string name, uint salary)
         {
             Name = name;
-            Salary = salary; 
+            Salary = salary;
         }
 
         public override string ToString()
