@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EmployeeList
 {
-    internal class Employee
+    internal class Employee : Object
     {
         public string Name { get; set; }
         public int Salary { get; set; }
@@ -15,6 +15,11 @@ namespace EmployeeList
         {
             Name = name;
             Salary = salary; 
+        }
+
+        public override string ToString()
+        {
+            return $"Name: {Name} Salary: {Salary}";
         }
     }
 }

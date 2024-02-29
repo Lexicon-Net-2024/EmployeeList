@@ -1,54 +1,75 @@
-﻿namespace EmployeeList
+﻿using System;
+using System.Xml.Linq;
+
+namespace EmployeeList
 {
     internal class Program
     {
+        private static Payroll payRoll = new Payroll(); 
         static void Main(string[] args)
         {
-            //Droid d = new Droid("C-3PO");
+            do
+            {
+                
+                Console.WriteLine("1. Add" +
+                    "\n2. Print" +
+                    "\nQ. Quit");
+                string input = Console.ReadLine().ToUpper();
 
-            //Console.WriteLine(d.GetFirstName());
+                switch (input)
+                {
+                    case "1":                    
+                        AddEmployee();
+                        break;
+                    case "2":
+                        PrintEmployees();
+                        break;
+                    case "Q":
+                        Environment.Exit(0); 
+                        break; 
+                    default:
+                        Console.WriteLine("Not a valid selection!");
+                        break;
+                }
 
-            ////d.firstname = "R2-D2";
-            //d.SetFirstName("R2-D2");
-            //Console.WriteLine(d.GetFirstName());
-            //d.Salary = 20000; 
+            } while (true);
 
-            //Employee emp = new Employee("Anders", 20000);
+        }        
 
-            //Console.WriteLine($"Name: {emp.Name} Salary: {emp.Salary}");
+        private static void AddEmployee()
+        {
+            bool success = false;
+            string name;
+            int salary = 0;
 
-            //emp.Name = "Nisse";
+            do
+            {
+                Console.Write("Name: ");
+                name = Console.ReadLine();
 
-            //Console.WriteLine($"Name: {emp.Name} Salary: {emp.Salary}");
+                if (string.IsNullOrWhiteSpace(name))
+                {
+                    Console.WriteLine("You must enter a valid name");
+                }
+                else
+                {
+                    success = true;
+                    Console.Write("Salary: ");
+                    int.TryParse(Console.ReadLine(), out salary);
+                }
+            } while (!success);
+            payRoll.AddEmployee(name, salary);
+        }
 
-
-
-            //Payroll payroll = new Payroll();
-
-            ////Lägger till ny anställd
-            //payroll.AddEmployee("Kalle", 25000);
-            //payroll.AddEmployee("Anna", 30000);
-
-            ////Hämtar en samling av alla anställda.
-            //IEnumerable<Employee> employees = payroll.GetEmployees();
-
-            ////Skriver ut alla anställda
-            //foreach (Employee employee in employees)
-            //{
-            //    Console.WriteLine($"Name: {employee.Name} Salary: {employee.Salary}");
-            //}
-
-            Droid d1 = new Droid("R2-D2");
-           // Console.WriteLine(Droid.Count);
-            Droid d2 = new Droid("C-3PO");
-           // Console.WriteLine(Droid.Count);
-            Droid d3 = new Droid("R5-D4");
-           // Console.WriteLine(Droid.Count);
-           // int count = Droid.Count;
-
-            Droid.GetCount(); 
-
-
+        private static void PrintEmployees()
+        {
+            IEnumerable<Employee> employees = payRoll.GetEmployees();
+            
+            foreach(Employee employee in employees)
+            {
+                //Console.WriteLine($"Name: {employee.Name} Salary: {employee.Salary}");
+                Console.WriteLine(employee.ToString()); 
+            }
         }
     }
 }
