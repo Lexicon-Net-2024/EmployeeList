@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EmployeeList.Helpers\EmployeeList.Helpers.csproj" />
+    <ProjectReference Include="..\EmployeList.Shared\EmployeList.Shared.csproj" />
   </ItemGroup>
 
 </Project>

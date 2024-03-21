@@ -9,6 +9,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeList.Helpers", "Emp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeList.MSTest", "EmployeeList.MSTest\EmployeeList.MSTest.csproj", "{423C2E4B-DDE7-4885-8487-712F5BC081C0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeList.XUnitTests", "EmployeeList.XUnitTests\EmployeeList.XUnitTests.csproj", "{A5B969F2-4E5F-43D6-8447-3EBAD8630629}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeList.Shared", "EmployeList.Shared\EmployeList.Shared.csproj", "{1AA63ACB-B754-49C4-8208-213DDC61C9C2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{423C2E4B-DDE7-4885-8487-712F5BC081C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{423C2E4B-DDE7-4885-8487-712F5BC081C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{423C2E4B-DDE7-4885-8487-712F5BC081C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5B969F2-4E5F-43D6-8447-3EBAD8630629}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5B969F2-4E5F-43D6-8447-3EBAD8630629}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5B969F2-4E5F-43D6-8447-3EBAD8630629}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5B969F2-4E5F-43D6-8447-3EBAD8630629}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AA63ACB-B754-49C4-8208-213DDC61C9C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AA63ACB-B754-49C4-8208-213DDC61C9C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AA63ACB-B754-49C4-8208-213DDC61C9C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AA63ACB-B754-49C4-8208-213DDC61C9C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
