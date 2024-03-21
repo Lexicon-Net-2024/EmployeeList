@@ -45,8 +45,8 @@ namespace EmployeeList
 
         private static void AddEmployee()
         {
-            string name = Util.AskForString("Name");
-            uint salary = Util.AskForUInt("Salary");
+            string name = Util.AskForString("Name", ui);
+            uint salary = Util.AskForUInt("Salary", ui);
 
             payRoll.AddEmployee(name, salary); 
         }
