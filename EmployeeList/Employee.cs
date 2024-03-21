@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
+[assembly: InternalsVisibleTo("EmployeeList.MSTest")]
 namespace EmployeeList
 {
     internal class Employee : object
@@ -37,6 +39,8 @@ namespace EmployeeList
 
         public override string ToString()
         {
+
+
             return $"Name: {Name} Salary: {Salary} Salary Level: {SalaryLevel}";
         }
     }

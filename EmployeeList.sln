@@ -5,7 +5,9 @@ VisualStudioVersion = 17.8.34408.163
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeList", "EmployeeList\EmployeeList.csproj", "{CE014BDF-92AC-4822-B46C-BBC6CB6CAC40}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeList.Helpers", "EmployeeList.Helpers\EmployeeList.Helpers.csproj", "{2B70A627-8FCB-4864-84DF-AFB884ADC053}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeList.Helpers", "EmployeeList.Helpers\EmployeeList.Helpers.csproj", "{2B70A627-8FCB-4864-84DF-AFB884ADC053}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeList.MSTest", "EmployeeList.MSTest\EmployeeList.MSTest.csproj", "{423C2E4B-DDE7-4885-8487-712F5BC081C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{2B70A627-8FCB-4864-84DF-AFB884ADC053}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B70A627-8FCB-4864-84DF-AFB884ADC053}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B70A627-8FCB-4864-84DF-AFB884ADC053}.Release|Any CPU.Build.0 = Release|Any CPU
+		{423C2E4B-DDE7-4885-8487-712F5BC081C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{423C2E4B-DDE7-4885-8487-712F5BC081C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{423C2E4B-DDE7-4885-8487-712F5BC081C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{423C2E4B-DDE7-4885-8487-712F5BC081C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
